@@ -4,49 +4,51 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>HyperMultiSwap • Multi-chain swap</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="main.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="container header-inner">
+    <div class="wrap header-inner">
       <div class="brand">
-        <img src="hypermultiswap logo.png" alt="HyperMultiSwap" class="logo" />
+        <!-- keep the same filename you uploaded for the logo -->
+        <img src="hypermultiswap logo.png" alt="HyperMultiSwap logo" class="logo" />
         <div class="brand-text">
           <div class="title">HyperMultiSwap</div>
           <div class="subtitle">Multi-chain swap • HyperFast • Rewards</div>
         </div>
       </div>
-      <nav class="nav">
+
+      <nav class="topnav">
         <a href="#product">Product</a>
         <a href="#roadmap">Roadmap</a>
         <a href="#hysp">HYSP</a>
         <a href="#community">Community</a>
-        <a class="btn" href="#" aria-disabled="true">Launch App (soon)</a>
+        <a class="btn-ghost" href="#" aria-disabled="true">Launch App (soon)</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
+  <main class="wrap">
     <section class="hero">
-      <div class="card hero-card">
+      <article class="card hero-card">
         <div class="badge">Season 0 · Building the core aggregator</div>
-        <h1>One swap layer for all EVM chains.</h1>
+        <h1 class="hero-title">One swap layer for all EVM chains.</h1>
         <p class="lead">
           HyperMultiSwap is a multi-chain swap aggregator with XP, quests and HYSP airdrops.
           Start on BNB, expand across EVM, then launch HyperDEX.
         </p>
 
-        <div class="controls">
-          <a class="cta primary" href="#community">Join Early Community</a>
-          <a class="cta outline" href="#roadmap">View Roadmap</a>
+        <div class="cta-row">
+          <a class="btn-primary" href="#community">Join Early Community</a>
+          <a class="btn-outline" href="#roadmap">View Roadmap</a>
         </div>
 
-        <div class="tags">
-          <span class="tag">BNB Aggregator</span>
-          <span class="tag">Multi-chain Routing</span>
-          <span class="tag">XP & Rewards</span>
+        <div class="tag-row">
+          <span class="pill">BNB Aggregator</span>
+          <span class="pill">Multi-chain Routing</span>
+          <span class="pill">XP & Rewards</span>
         </div>
-      </div>
+      </article>
 
       <aside class="card side-card">
         <h3>Live plan</h3>
@@ -55,13 +57,31 @@
           <li><strong>Phase 2</strong> — Multi-chain Core</li>
           <li><strong>Phase 3</strong> — Liquidity & HyperDEX</li>
         </ol>
-        <p class="muted">HYSP token, staking and governance planned later.</p>
+        <p class="muted">HYSP token, staking and governance planned for later phases.</p>
       </aside>
+    </section>
+
+    <section id="product" class="section">
+      <h2>What we’re building</h2>
+      <p class="muted">Routing swaps across best liquidity to earn on-chain XP and rewards.</p>
+      <div class="grid">
+        <div class="info card-min">
+          <h4>BSC Aggregator</h4>
+          <p class="muted">Phase 1 launches on BNB with optimized routing and gamified UI.</p>
+        </div>
+        <div class="info card-min">
+          <h4>Multi-chain Engine</h4>
+          <p class="muted">Add Base, Ethereum and more EVM chains with unified experience.</p>
+        </div>
+        <div class="info card-min">
+          <h4>XP & Quests</h4>
+          <p class="muted">Swaps, referrals and streaks earn XP tracked to wallet addresses.</p>
+        </div>
+      </div>
     </section>
 
     <section id="roadmap" class="section">
       <h2>Roadmap (preview)</h2>
-      <p class="muted">From BSC aggregator to full multi-chain protocol and token launch.</p>
       <ul class="roadmap">
         <li>Phase 1 — BSC Aggregator</li>
         <li>Phase 2 — Multi-chain Aggregator</li>
@@ -73,16 +93,16 @@
 
     <section id="community" class="section">
       <h2>Community</h2>
-      <p class="muted">Follow us on X and join the Discord (links coming).</p>
+      <p class="muted">Follow @hypermultiswap on X and join the community. Links will be added soon.</p>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">© <span id="yr"></span> HyperMultiSwap • Built by Team</div>
+    <div class="wrap">© <span id="year"></span> HyperMultiSwap • Built by Team</div>
   </footer>
 
   <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
