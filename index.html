@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HyperMultiSwap | Multi-chain Swap Aggregator</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HyperMultiSwap • Multi-chain Swap · HyperFast · Rewards</title>
+
+  <!-- SEO / Social -->
+  <meta name="description" content="HyperMultiSwap — Multi-chain Swap • HyperFast • Rewards. One swap layer for all EVM chains. HYSP token, staking & XP systems coming." />
+  <meta property="og:title" content="HyperMultiSwap • Multi-chain Swap · HyperFast · Rewards" />
+  <meta property="og:description" content="Multi-chain Swap • HyperFast • Rewards. One swap layer for all EVM chains." />
+  <meta property="og:type" content="website" />
+  <!-- change og:image to your final banner if uploaded -->
+  <meta property="og:image" content="https://beingsoumendra.github.io/hyper-quests/hypermultiswap-banner.png" />
+
   <link rel="stylesheet" href="main.css" />
 </head>
 <body class="bg-lightning">
-  <header class="nav">
+  <header class="nav" role="banner">
     <div class="nav-left">
       <div class="logo-mark">
-        <img src="hypermultiswap logo.png" alt="HyperMultiSwap logo">
+        <img src="hypermultiswap logo.png" alt="HyperMultiSwap logo" />
       </div>
       <div class="logo-text">
-        <span class="logo-title">HyperMultiSwap</span>
-        <span class="logo-sub">Multi-chain swap + XP + HYSP</span>
+        <div class="logo-title">HyperMultiSwap</div>
+        <div class="logo-sub">Multi-chain swap · HyperFast · Rewards</div>
       </div>
     </div>
 
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Main navigation">
       <a href="#product">Product</a>
       <a href="#roadmap">Roadmap</a>
       <a href="#token">HYSP</a>
@@ -26,21 +35,17 @@
     </nav>
 
     <div class="nav-actions">
-      <!-- later this can link to real app -->
-      <a href="#" class="btn btn-primary disabled">Launch App (soon)</a>
+      <a class="btn btn-primary" href="#community">Launch App (soon)</a>
     </div>
   </header>
 
   <main class="page">
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="product">
       <div class="hero-main-card">
         <div class="hero-badge">Season 0 • Building the core aggregator</div>
         <h1 class="hero-title">One swap layer for all EVM chains.</h1>
-        <p class="hero-subtitle">
-          HyperMultiSwap is a multi-chain swap aggregator with XP, quests and
-          HYSP airdrops. Start on BNB, expand across EVM, then launch HyperDEX.
-        </p>
+        <p class="hero-subtitle">HyperMultiSwap is a multi-chain swap aggregator with XP, quests and HYSP airdrops. Start on BNB, expand across EVM, then launch HyperDEX.</p>
 
         <div class="hero-actions">
           <a href="#community" class="btn btn-primary">Join Early Community</a>
@@ -50,129 +55,72 @@
         <div class="hero-tags">
           <span class="tag">BNB Aggregator</span>
           <span class="tag">Multi-chain Routing</span>
-          <span class="tag">XP & Airdrops</span>
+          <span class="tag">XP & Rewards</span>
         </div>
+
+        <!-- Waitlist form (client posts to secure serverless endpoint) -->
+        <form id="waitlistForm" class="waitlist-form" onsubmit="submitEmail(event)">
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+          <div style="display:flex;gap:10px">
+            <button id="submitBtn" type="submit" class="btn btn-primary">Join the Waitlist</button>
+            <button id="twitterFollowBtn" type="button" class="btn btn-outline" onclick="openX()">Follow @hypermultiswap</button>
+          </div>
+          <p class="hint">By joining you accept our <a href="#privacy" style="color:inherit">privacy</a> policy. We keep emails private.</p>
+        </form>
       </div>
 
-      <div class="hero-side-card">
+      <aside class="hero-side-card">
         <h2 class="side-title">Live plan</h2>
         <ul class="side-list">
-          <li>
-            <span>Phase 1 — BSC Aggregator</span>
-            <p>BNB Chain swap aggregator with 1inch routing and XP on every swap.</p>
-          </li>
-          <li>
-            <span>Phase 2 — Multi-chain Core</span>
-            <p>Expand to Base, Ethereum and more EVM chains behind a single UI.</p>
-          </li>
-          <li>
-            <span>Phase 3 — Liquidity & HyperDEX</span>
-            <p>Liquidity layer, optimized paths and the first HyperDEX release.</p>
-          </li>
+          <li><span>Phase 1 — BSC Aggregator</span><p>BNB Chain swap aggregator with 1inch routing and XP on every swap.</p></li>
+          <li><span>Phase 2 — Multi-chain Core</span><p>Expand to Base, Ethereum and more EVM chains behind a single UI.</p></li>
+          <li><span>Phase 3 — Liquidity & HyperDEX</span><p>Liquidity layer, optimized paths and the first HyperDEX release.</p></li>
         </ul>
-        <p class="side-foot">
-          HYSP token, IDO and airdrop arrive in later phases.
-        </p>
-      </div>
+        <p class="side-foot">HYSP token, staking and a governance roadmap are planned for later phases.</p>
+      </aside>
     </section>
 
-    <!-- PRODUCT -->
-    <section id="product" class="section">
-      <h2 class="section-title">What we’re building</h2>
-      <p class="section-text">
-        HyperMultiSwap will route swaps across the best liquidity on BNB and other
-        EVM chains. Every swap earns on-chain XP for future HYSP airdrops and
-        rewards.
-      </p>
-
-      <div class="cards-grid">
-        <div class="info-card">
-          <h3>BSC Aggregator</h3>
-          <p>
-            Phase 1 launches on BNB with 1inch under the hood, low fees and a
-            gaming-style UI.
-          </p>
-        </div>
-        <div class="info-card">
-          <h3>Multi-chain Engine</h3>
-          <p>
-            Expand routing to Base, Ethereum and more EVM chains with a unified
-            experience.
-          </p>
-        </div>
-        <div class="info-card">
-          <h3>XP & Quests</h3>
-          <p>
-            Swaps, referrals and streaks earn XP instantly, tracked by wallet
-            address for future seasons.
-          </p>
-        </div>
-      </div>
+    <!-- XP quick rules -->
+    <section class="section">
+      <h2 class="section-title">XP system (preview)</h2>
+      <p class="section-text">Every swap earns XP that counts for seasonal rewards. Example rules:</p>
+      <ul class="cards-grid">
+        <li class="info-card"><h3>Base Rate</h3><p>2 XP per $10 swapped (rounded).</p></li>
+        <li class="info-card"><h3>Referral Bonus</h3><p>5% additional XP to the referrer when their friend swaps.</p></li>
+        <li class="info-card"><h3>Streaks & Events</h3><p>Extra XP for consecutive days and limited-time events.</p></li>
+      </ul>
     </section>
 
     <!-- ROADMAP -->
     <section id="roadmap" class="section">
       <h2 class="section-title">Roadmap</h2>
-      <p class="section-text">
-        A focused path from BSC aggregator to a full multi-chain protocol and HYSP launch.
-      </p>
+      <p class="section-text">A focused path from BSC aggregator to a full multi-chain protocol and HYSP launch.</p>
 
       <ol class="roadmap">
-        <li>
-          <h3>Phase 1 — BSC Aggregator</h3>
-          <p>
-            Launch HyperMultiSwap v1 on BNB with swap aggregation, 0.23% fee
-            routing and XP system.
-          </p>
-        </li>
-        <li>
-          <h3>Phase 2 — Multi-chain Aggregator</h3>
-          <p>
-            Add Base, Ethereum and additional EVM chains with a unified routing engine.
-          </p>
-        </li>
-        <li>
-          <h3>Phase 3 — Liquidity & HyperDEX</h3>
-          <p>
-            Introduce liquidity layer, optimized routes and the first version of HyperDEX.
-          </p>
-        </li>
-        <li>
-          <h3>Phase 4 — Partnerships & IDO</h3>
-          <p>
-            Strategic integrations, ecosystem partners and IDO preparation for HYSP.
-          </p>
-        </li>
-        <li>
-          <h3>Phase 5 — TGE & Airdrop</h3>
-          <p>
-            Token Generation Event, HYSP staking and Season 1 airdrop based on XP and volume.
-          </p>
-        </li>
+        <li><h3>Phase 1 — BSC Aggregator</h3><p>Launch HyperMultiSwap v1 on BNB with swap aggregation, audited routing and XP tracking.</p></li>
+        <li><h3>Phase 2 — Multi-chain Core</h3><p>Add Base, Ethereum and other EVM chains with unified routing.</p></li>
+        <li><h3>Phase 3 — Liquidity & HyperDEX</h3><p>Introduce liquidity layer and HyperDEX v1.</p></li>
+        <li><h3>Phase 4 — Partnerships & IDO</h3><p>Integrations, partnerships, and IDO preparation.</p></li>
+        <li><h3>Phase 5 — Token Launch, Staking & Rewards</h3><p>TGE, staged distributions, staking and ongoing seasonal rewards.</p></li>
+        <li><h3>Phase 6 — Listings & Liquidity Mining</h3><p>List HYSP on top markets and run mining campaigns.</p></li>
+        <li><h3>Phase 7 — Governance & DAO</h3><p>Launch governance, proposals and DAO treasury utilities.</p></li>
+        <li><h3>Phase 8 — Ecosystem Scale & Interop</h3><p>SDKs, bridges, enterprise integrations and scaling programs.</p></li>
       </ol>
     </section>
 
     <!-- TOKEN -->
     <section id="token" class="section">
-      <h2 class="section-title">HYSP Token (coming)</h2>
-      <p class="section-text">
-        HYSP will be the native token of the HyperMultiSwap ecosystem — powering fee share,
-        staking, governance and XP boosts. Planned supply: 10M with fair allocation
-        to early users.
-      </p>
+      <h2 class="section-title">HYSP Token</h2>
+      <p class="section-text">HYSP will be the ecosystem token: staking, governance, rewards & fee-sharing. Further details coming in Phase 5.</p>
     </section>
 
     <!-- COMMUNITY -->
     <section id="community" class="section">
       <h2 class="section-title">Community</h2>
-      <p class="section-text">
-        Follow the journey, test early builds and secure your spot for Season 1 airdrop eligibility.
-      </p>
-
+      <p class="section-text">Join our X and Discord to get early access and updates.</p>
       <div class="community-links">
-        <a href="https://x.com/hypermultiswap" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-          Follow on X (Twitter)
-        </a>
+        <a href="https://x.com/hypermultiswap" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Follow on X</a>
+        <!-- add Discord / Telegram when ready -->
       </div>
     </section>
   </main>
@@ -183,6 +131,40 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    function openX(){
+      window.open('https://x.com/hypermultiswap','_blank','noopener');
+    }
+
+    async function submitEmail(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      if(!email) return alert('Please enter an email.');
+      const btn = document.getElementById('submitBtn');
+      btn.disabled = true;
+      btn.textContent = 'Joining...';
+
+      try {
+        // POST to your serverless endpoint (implement with Firebase Function / Netlify function)
+        const res = await fetch('https://YOUR_FUNCTION_URL/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, source: 'website-waitlist' })
+        });
+
+        if (!res.ok) throw new Error('Submit failed');
+
+        btn.textContent = 'Joined ✓';
+        document.getElementById('waitlistForm').reset();
+        alert('Thanks — you are on the waitlist!');
+
+      } catch (err) {
+        console.error(err);
+        alert('Could not join right now. Please try again later.');
+        btn.disabled = false;
+        btn.textContent = 'Join the Waitlist';
+      }
+    }
   </script>
 </body>
 </html>
