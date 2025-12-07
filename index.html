@@ -1,44 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HyperMultiSwap</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HyperMultiSwap — Multi-chain swap · HyperFast · Rewards</title>
   <link rel="stylesheet" href="main.css" />
 </head>
-<body>
-  <header>
-    <div class="container">
-      <img src="hypermultiswap logo.png" class="logo" alt="HyperMultiSwap Logo">
-      <h1>HyperMultiSwap</h1>
-      <p class="tagline">Multi-chain swap • HyperFast • Rewards</p>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">Product</a>
-        <a href="#">Roadmap</a>
-        <a href="#">Community</a>
+<body class="bg-lightning">
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <img src="hypermultiswap logo.png" alt="HyperMultiSwap" class="logo" />
+        <div>
+          <div class="title">HyperMultiSwap</div>
+          <div class="subtitle">Multi-chain swap · HyperFast · Rewards</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#product">Product</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#hysp">HYSP</a>
+        <a href="#community">Community</a>
       </nav>
+
+      <div class="nav-cta">
+        <a class="btn btn-primary disabled" title="Coming soon">Launch App (soon)</a>
+      </div>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h2>One swap layer for all EVM chains.</h2>
-      <p>HyperMultiSwap is a multi-chain swap aggregator with XP, quests, and HYP rewards.  
-      Start on BNB, expand across EVM, then launch HyperDEX.</p>
-      <div class="buttons">
-        <a href="#" class="btn-primary">Join Early Community</a>
-        <a href="#" class="btn-outline">View Roadmap</a>
-      </div>
-    </div>
-  </section>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="card hero-main">
+          <div class="badge">Season 0 · Building the core aggregator</div>
+          <h1>One swap layer for all EVM chains.</h1>
+          <p class="lead">
+            HyperMultiSwap is a multi-chain swap aggregator with XP, quests and HYSP rewards.
+            Start on BNB, expand across EVM, then launch HyperDEX.
+          </p>
 
-  <footer>
-    <p>© <span id="year"></span> HyperMultiSwap. All rights reserved.</p>
+          <div class="actions">
+            <a href="#community" class="btn btn-primary">Join Early Community</a>
+            <a href="#roadmap" class="btn btn-outline">View Roadmap</a>
+          </div>
+
+          <div class="tags">
+            <span class="tag">BNB Aggregator</span>
+            <span class="tag">Multi-chain Routing</span>
+            <span class="tag">XP & Rewards</span>
+          </div>
+
+          <div class="follow-row">
+            <a class="btn btn-outline" id="followX" href="https://x.com/hypermultiswap" target="_blank" rel="noopener noreferrer">
+              𝕏 Follow @hypermultiswap
+            </a>
+          </div>
+
+        </div>
+
+        <aside class="card hero-side">
+          <h3>Live plan</h3>
+          <ul class="plan">
+            <li><strong>Phase 1 — BSC Aggregator</strong><br/>BNB Chain swap aggregator & XP per swap.</li>
+            <li><strong>Phase 2 — Multi-chain Core</strong><br/>Base, Ethereum & more EVM chains.</li>
+            <li><strong>Phase 3 — Liquidity & HyperDEX</strong><br/>Liquidity layer and HyperDEX UI.</li>
+            <li><strong>Phase 4 — Partnerships & IDO</strong></li>
+            <li><strong>Phase 5 — TGE & Airdrop</strong></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="roadmap" class="wrap section">
+      <h2>Roadmap (preview)</h2>
+      <ul class="roadmap-list">
+        <li>Phase 1 — BSC Aggregator</li>
+        <li>Phase 2 — Multi-chain Aggregator</li>
+        <li>Phase 3 — Liquidity & HyperDEX</li>
+        <li>Phase 4 — Partnerships & IDO</li>
+        <li>Phase 5 — TGE & Airdrop</li>
+      </ul>
+    </section>
+
+    <section id="community" class="wrap section">
+      <h2>Community</h2>
+      <p>Follow <a href="https://x.com/hypermultiswap" target="_blank" rel="noopener noreferrer">@hypermultiswap</a> on X and join the community. Links will be added soon.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© <span id="yr"></span> HyperMultiSwap • Built by Team</small>
+    </div>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Small UX: open X follow in new window and focus
+    document.getElementById('followX').addEventListener('click', function(e){
+      // default anchor opens new tab; keep it
+      // if you later want to verify follow server-side, implement OAuth X flow
+    });
   </script>
 </body>
 </html>
