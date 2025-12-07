@@ -3,168 +3,86 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>HyperMultiSwap • Multi-chain Swap · HyperFast · Rewards</title>
-
-  <!-- SEO / Social -->
-  <meta name="description" content="HyperMultiSwap — Multi-chain Swap • HyperFast • Rewards. One swap layer for all EVM chains. HYSP token, staking & XP systems coming." />
-  <meta property="og:title" content="HyperMultiSwap • Multi-chain Swap · HyperFast · Rewards" />
-  <meta property="og:description" content="Multi-chain Swap • HyperFast • Rewards. One swap layer for all EVM chains." />
-  <meta property="og:type" content="website" />
-  <!-- change og:image to your final banner if uploaded -->
-  <meta property="og:image" content="https://beingsoumendra.github.io/hyper-quests/hypermultiswap-banner.png" />
-
-  <link rel="stylesheet" href="main.css" />
+  <title>HyperMultiSwap • Multi-chain swap</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-lightning">
-  <header class="nav" role="banner">
-    <div class="nav-left">
-      <div class="logo-mark">
-        <img src="hypermultiswap logo.png" alt="HyperMultiSwap logo" />
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="hypermultiswap logo.png" alt="HyperMultiSwap" class="logo" />
+        <div class="brand-text">
+          <div class="title">HyperMultiSwap</div>
+          <div class="subtitle">Multi-chain swap • HyperFast • Rewards</div>
+        </div>
       </div>
-      <div class="logo-text">
-        <div class="logo-title">HyperMultiSwap</div>
-        <div class="logo-sub">Multi-chain swap · HyperFast · Rewards</div>
-      </div>
-    </div>
-
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="#product">Product</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="#token">HYSP</a>
-      <a href="#community">Community</a>
-    </nav>
-
-    <div class="nav-actions">
-      <a class="btn btn-primary" href="#community">Launch App (soon)</a>
+      <nav class="nav">
+        <a href="#product">Product</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#hysp">HYSP</a>
+        <a href="#community">Community</a>
+        <a class="btn" href="#" aria-disabled="true">Launch App (soon)</a>
+      </nav>
     </div>
   </header>
 
-  <main class="page">
-    <!-- HERO -->
-    <section class="hero" id="product">
-      <div class="hero-main-card">
-        <div class="hero-badge">Season 0 • Building the core aggregator</div>
-        <h1 class="hero-title">One swap layer for all EVM chains.</h1>
-        <p class="hero-subtitle">HyperMultiSwap is a multi-chain swap aggregator with XP, quests and HYSP airdrops. Start on BNB, expand across EVM, then launch HyperDEX.</p>
+  <main class="container">
+    <section class="hero">
+      <div class="card hero-card">
+        <div class="badge">Season 0 · Building the core aggregator</div>
+        <h1>One swap layer for all EVM chains.</h1>
+        <p class="lead">
+          HyperMultiSwap is a multi-chain swap aggregator with XP, quests and HYSP airdrops.
+          Start on BNB, expand across EVM, then launch HyperDEX.
+        </p>
 
-        <div class="hero-actions">
-          <a href="#community" class="btn btn-primary">Join Early Community</a>
-          <a href="#roadmap" class="btn btn-outline">View Roadmap</a>
+        <div class="controls">
+          <a class="cta primary" href="#community">Join Early Community</a>
+          <a class="cta outline" href="#roadmap">View Roadmap</a>
         </div>
 
-        <div class="hero-tags">
+        <div class="tags">
           <span class="tag">BNB Aggregator</span>
           <span class="tag">Multi-chain Routing</span>
           <span class="tag">XP & Rewards</span>
         </div>
-
-        <!-- Waitlist form (client posts to secure serverless endpoint) -->
-        <form id="waitlistForm" class="waitlist-form" onsubmit="submitEmail(event)">
-          <input type="email" id="email" name="email" placeholder="Enter your email address" required />
-          <div style="display:flex;gap:10px">
-            <button id="submitBtn" type="submit" class="btn btn-primary">Join the Waitlist</button>
-            <button id="twitterFollowBtn" type="button" class="btn btn-outline" onclick="openX()">Follow @hypermultiswap</button>
-          </div>
-          <p class="hint">By joining you accept our <a href="#privacy" style="color:inherit">privacy</a> policy. We keep emails private.</p>
-        </form>
       </div>
 
-      <aside class="hero-side-card">
-        <h2 class="side-title">Live plan</h2>
-        <ul class="side-list">
-          <li><span>Phase 1 — BSC Aggregator</span><p>BNB Chain swap aggregator with 1inch routing and XP on every swap.</p></li>
-          <li><span>Phase 2 — Multi-chain Core</span><p>Expand to Base, Ethereum and more EVM chains behind a single UI.</p></li>
-          <li><span>Phase 3 — Liquidity & HyperDEX</span><p>Liquidity layer, optimized paths and the first HyperDEX release.</p></li>
-        </ul>
-        <p class="side-foot">HYSP token, staking and a governance roadmap are planned for later phases.</p>
+      <aside class="card side-card">
+        <h3>Live plan</h3>
+        <ol class="plan">
+          <li><strong>Phase 1</strong> — BSC Aggregator</li>
+          <li><strong>Phase 2</strong> — Multi-chain Core</li>
+          <li><strong>Phase 3</strong> — Liquidity & HyperDEX</li>
+        </ol>
+        <p class="muted">HYSP token, staking and governance planned later.</p>
       </aside>
     </section>
 
-    <!-- XP quick rules -->
-    <section class="section">
-      <h2 class="section-title">XP system (preview)</h2>
-      <p class="section-text">Every swap earns XP that counts for seasonal rewards. Example rules:</p>
-      <ul class="cards-grid">
-        <li class="info-card"><h3>Base Rate</h3><p>2 XP per $10 swapped (rounded).</p></li>
-        <li class="info-card"><h3>Referral Bonus</h3><p>5% additional XP to the referrer when their friend swaps.</p></li>
-        <li class="info-card"><h3>Streaks & Events</h3><p>Extra XP for consecutive days and limited-time events.</p></li>
+    <section id="roadmap" class="section">
+      <h2>Roadmap (preview)</h2>
+      <p class="muted">From BSC aggregator to full multi-chain protocol and token launch.</p>
+      <ul class="roadmap">
+        <li>Phase 1 — BSC Aggregator</li>
+        <li>Phase 2 — Multi-chain Aggregator</li>
+        <li>Phase 3 — Liquidity & HyperDEX</li>
+        <li>Phase 4 — Partnerships & IDO</li>
+        <li>Phase 5 — TGE & Airdrop</li>
       </ul>
     </section>
 
-    <!-- ROADMAP -->
-    <section id="roadmap" class="section">
-      <h2 class="section-title">Roadmap</h2>
-      <p class="section-text">A focused path from BSC aggregator to a full multi-chain protocol and HYSP launch.</p>
-
-      <ol class="roadmap">
-        <li><h3>Phase 1 — BSC Aggregator</h3><p>Launch HyperMultiSwap v1 on BNB with swap aggregation, audited routing and XP tracking.</p></li>
-        <li><h3>Phase 2 — Multi-chain Core</h3><p>Add Base, Ethereum and other EVM chains with unified routing.</p></li>
-        <li><h3>Phase 3 — Liquidity & HyperDEX</h3><p>Introduce liquidity layer and HyperDEX v1.</p></li>
-        <li><h3>Phase 4 — Partnerships & IDO</h3><p>Integrations, partnerships, and IDO preparation.</p></li>
-        <li><h3>Phase 5 — Token Launch, Staking & Rewards</h3><p>TGE, staged distributions, staking and ongoing seasonal rewards.</p></li>
-        <li><h3>Phase 6 — Listings & Liquidity Mining</h3><p>List HYSP on top markets and run mining campaigns.</p></li>
-        <li><h3>Phase 7 — Governance & DAO</h3><p>Launch governance, proposals and DAO treasury utilities.</p></li>
-        <li><h3>Phase 8 — Ecosystem Scale & Interop</h3><p>SDKs, bridges, enterprise integrations and scaling programs.</p></li>
-      </ol>
-    </section>
-
-    <!-- TOKEN -->
-    <section id="token" class="section">
-      <h2 class="section-title">HYSP Token</h2>
-      <p class="section-text">HYSP will be the ecosystem token: staking, governance, rewards & fee-sharing. Further details coming in Phase 5.</p>
-    </section>
-
-    <!-- COMMUNITY -->
     <section id="community" class="section">
-      <h2 class="section-title">Community</h2>
-      <p class="section-text">Join our X and Discord to get early access and updates.</p>
-      <div class="community-links">
-        <a href="https://x.com/hypermultiswap" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Follow on X</a>
-        <!-- add Discord / Telegram when ready -->
-      </div>
+      <h2>Community</h2>
+      <p class="muted">Follow us on X and join the Discord (links coming).</p>
     </section>
   </main>
 
-  <footer class="footer">
-    <p>© <span id="year"></span> HyperMultiSwap • Built by Team</p>
+  <footer class="site-footer">
+    <div class="container">© <span id="yr"></span> HyperMultiSwap • Built by Team</div>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    function openX(){
-      window.open('https://x.com/hypermultiswap','_blank','noopener');
-    }
-
-    async function submitEmail(e) {
-      e.preventDefault();
-      const email = document.getElementById('email').value.trim();
-      if(!email) return alert('Please enter an email.');
-      const btn = document.getElementById('submitBtn');
-      btn.disabled = true;
-      btn.textContent = 'Joining...';
-
-      try {
-        // POST to your serverless endpoint (implement with Firebase Function / Netlify function)
-        const res = await fetch('https://YOUR_FUNCTION_URL/submit', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, source: 'website-waitlist' })
-        });
-
-        if (!res.ok) throw new Error('Submit failed');
-
-        btn.textContent = 'Joined ✓';
-        document.getElementById('waitlistForm').reset();
-        alert('Thanks — you are on the waitlist!');
-
-      } catch (err) {
-        console.error(err);
-        alert('Could not join right now. Please try again later.');
-        btn.disabled = false;
-        btn.textContent = 'Join the Waitlist';
-      }
-    }
+    document.getElementById('yr').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
