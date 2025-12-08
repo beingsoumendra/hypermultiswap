@@ -11,6 +11,7 @@
   <header class="nav">
     <div class="nav-left">
       <div class="logo-mark">
+        <!-- make sure file name matches exactly -->
         <img src="hypermultiswap-logo.png" alt="HyperMultiSwap logo" class="logo-img" />
       </div>
       <div class="logo-text">
@@ -34,7 +35,6 @@
   </header>
 
   <main class="page">
-
     <!-- HERO -->
     <section class="hero">
       <div class="hero-main-card">
@@ -48,7 +48,9 @@
         </p>
 
         <div class="hero-actions">
-          <a href="https://x.com/hypermultiswap" class="btn btn-primary" target="_blank">Follow on X</a>
+          <a href="https://x.com/hypermultiswap" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            Follow on X
+          </a>
           <a href="#roadmap" class="btn btn-outline">View Roadmap</a>
         </div>
 
@@ -75,6 +77,7 @@
             <p>Liquidity layer, optimized paths and the first HyperDEX release.</p>
           </li>
         </ul>
+        <p class="side-foot">HYSP token, staking and governance roadmap planned for later phases.</p>
       </aside>
     </section>
 
@@ -97,29 +100,60 @@
         </div>
         <div class="info-card">
           <h3>XP & Quests</h3>
-          <p>Swaps, referrals and streaks earn XP instantly, tracked on-chain.</p>
+          <p>Swaps, referrals and streaks earn XP instantly, tracked by wallet address for future seasons.</p>
         </div>
       </div>
     </section>
 
-    <!-- ROADMAP -->
+    <!-- ROADMAP (FULL TILL PHASE 7 + MILESTONE) -->
     <section id="roadmap" class="section">
       <h2 class="section-title">Roadmap</h2>
+      <p class="section-text">
+        From BSC aggregator to a full multi-chain protocol — staged milestones and community-first incentives.
+      </p>
 
       <ol class="roadmap">
         <li>
           <h3>Phase 1 — BSC Aggregator</h3>
-          <p>Launch HyperMultiSwap v1 on BNB with swap aggregation.</p>
+          <p>Launch HyperMultiSwap v1 on BNB with swap aggregation, 0.23% commission and XP system.</p>
         </li>
 
         <li>
           <h3>Phase 2 — Multi-chain Core</h3>
-          <p>Extend routing to Base, Ethereum, Polygon, Arbitrum, Optimism.</p>
+          <p>Extend routing to Base, Ethereum, Polygon, Arbitrum, Optimism and additional EVM chains.</p>
         </li>
 
         <li>
           <h3>Phase 3 — Liquidity Layer & HyperDEX</h3>
-          <p>Liquidity vaults & smart routing system.</p>
+          <p>Introduce liquidity vaults, smart routing and HyperDEX for optimized swaps and reduced slippage.</p>
+        </li>
+
+        <li>
+          <h3>Phase 4 — Partnerships & Integrations</h3>
+          <p>Wallet integrations, bridge partners and ecosystem integrations to scale liquidity and reach.</p>
+        </li>
+
+        <li>
+          <h3>Phase 5 — HYSP TGE & Staking</h3>
+          <p>Token Generation Event, staking, governance preparation and utility unlocks for early users.</p>
+        </li>
+
+        <li>
+          <h3>Phase 6 — Listings, Liquidity Boost & Market Growth</h3>
+          <p>DEX/CEX listings, liquidity mining programs and global marketing to grow volume.</p>
+        </li>
+
+        <li>
+          <h3>Phase 7 — Governance, DAO & Ecosystem Scale</h3>
+          <p>Launch governance, DAO treasury utilities, developer SDKs and cross-chain tooling.</p>
+        </li>
+
+        <li>
+          <h3>Milestone — Season 2 Airdrop Trigger</h3>
+          <p>
+            When HyperMultiSwap reaches <strong>$500,000,000</strong> cumulative swap volume,
+            <strong>Season 2 Airdrop</strong> will be activated — XP-weighted rewards for active users and referrers.
+          </p>
         </li>
       </ol>
     </section>
@@ -128,29 +162,18 @@
     <section id="token" class="section">
       <h2 class="section-title">HYSP Token (coming)</h2>
       <p class="section-text">
-        HYSP will power staking, governance and XP boosts. Total supply: 10M.
+        HYSP will be the native token powering staking, governance and XP boosts. Planned supply: 10M.
       </p>
     </section>
 
     <!-- COMMUNITY -->
     <section id="community" class="section">
       <h2 class="section-title">Community</h2>
+      <p class="section-text">
+        Follow the journey, test early builds and secure your spot for Season 1 eligibility.
+      </p>
 
       <div class="community-links">
-        <a class="btn btn-outline" href="https://x.com/hypermultiswap" target="_blank">
-          Follow on X
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>© <span id="year"></span> HyperMultiSwap • Built by Team</p>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-
-</body>
-</html>
+        <a
+          class="btn btn-outline"
+          href="https://x.com/hypermultiswap"
