@@ -27,13 +27,14 @@
     </nav>
 
     <div class="nav-actions">
-      <button class="btn btn-primary btn-disabled" disabled aria-disabled="true">
+      <button class="btn btn-primary btn-disabled" disabled>
         Launch App (soon)
       </button>
     </div>
   </header>
 
   <main class="page">
+
     <!-- HERO -->
     <section class="hero">
       <div class="hero-main-card">
@@ -47,26 +48,11 @@
         </p>
 
         <div class="hero-actions">
-          <a href="#community" class="btn btn-primary">Join Early Community</a>
+          <a href="https://x.com/hypermultiswap" class="btn btn-primary" target="_blank">Follow on X</a>
           <a href="#roadmap" class="btn btn-outline">View Roadmap</a>
         </div>
 
-        <div class="hero-metrics">
-          <div class="metric">
-            <div class="metric-label">Season</div>
-            <div class="metric-value">0</div>
-          </div>
-          <div class="metric">
-            <div class="metric-label">Early wallets joined</div>
-            <div class="metric-value" id="walletCount">127</div>
-          </div>
-          <div class="metric">
-            <div class="metric-label">Target chains</div>
-            <div class="metric-value">5+</div>
-          </div>
-        </div>
-
-        <div class="hero-tags" aria-hidden="true">
+        <div class="hero-tags">
           <span class="tag">BNB Aggregator</span>
           <span class="tag">Multi-chain Routing</span>
           <span class="tag">XP & Rewards</span>
@@ -89,7 +75,6 @@
             <p>Liquidity layer, optimized paths and the first HyperDEX release.</p>
           </li>
         </ul>
-        <p class="side-foot">HYSP token, staking and governance roadmap planned for later phases.</p>
       </aside>
     </section>
 
@@ -112,7 +97,7 @@
         </div>
         <div class="info-card">
           <h3>XP & Quests</h3>
-          <p>Swaps, referrals and streaks earn XP instantly, tracked by wallet address for future seasons.</p>
+          <p>Swaps, referrals and streaks earn XP instantly, tracked on-chain.</p>
         </div>
       </div>
     </section>
@@ -120,50 +105,21 @@
     <!-- ROADMAP -->
     <section id="roadmap" class="section">
       <h2 class="section-title">Roadmap</h2>
-      <p class="section-text">
-        From BSC aggregator to a full multi-chain protocol — staged milestones and community-first incentives.
-      </p>
 
       <ol class="roadmap">
         <li>
           <h3>Phase 1 — BSC Aggregator</h3>
-          <p>Launch HyperMultiSwap v1 on BNB with swap aggregation, 0.23% commission and XP system.</p>
+          <p>Launch HyperMultiSwap v1 on BNB with swap aggregation.</p>
         </li>
 
         <li>
           <h3>Phase 2 — Multi-chain Core</h3>
-          <p>Extend routing to Base, Ethereum, Polygon, Arbitrum, Optimism and additional EVM chains.</p>
+          <p>Extend routing to Base, Ethereum, Polygon, Arbitrum, Optimism.</p>
         </li>
 
         <li>
           <h3>Phase 3 — Liquidity Layer & HyperDEX</h3>
-          <p>Introduce liquidity vaults, smart routing and HyperDEX for optimized swaps and reduced slippage.</p>
-        </li>
-
-        <li>
-          <h3>Phase 4 — Partnerships & Integrations</h3>
-          <p>Wallet integrations, bridge partners and ecosystem integrations to scale liquidity and reach.</p>
-        </li>
-
-        <li>
-          <h3>Phase 5 — HYSP TGE & Staking</h3>
-          <p>Token Generation Event, staking, governance preparation and utility unlocks for early users.</p>
-        </li>
-
-        <li>
-          <h3>Phase 6 — Listings, Liquidity Boost & Market Growth</h3>
-          <p>DEX/CEX listings, liquidity mining programs and global marketing to grow volume.</p>
-        </li>
-
-        <li>
-          <h3>Phase 7 — Governance, DAO & Ecosystem Scale</h3>
-          <p>Launch governance, DAO treasury utilities, developer SDKs and cross-chain tooling.</p>
-        </li>
-
-        <li>
-          <h3>Milestone — Season 2 Airdrop Trigger</h3>
-          <p>When HyperMultiSwap reaches <strong>$500,000,000</strong> cumulative swap volume,
-             <strong>Season 2 Airdrop</strong> will be activated — XP-weighted rewards for active users and referrers.</p>
+          <p>Liquidity vaults & smart routing system.</p>
         </li>
       </ol>
     </section>
@@ -172,37 +128,18 @@
     <section id="token" class="section">
       <h2 class="section-title">HYSP Token (coming)</h2>
       <p class="section-text">
-        HYSP will be the native token powering staking, governance and XP boosts. Planned supply: 10M.
+        HYSP will power staking, governance and XP boosts. Total supply: 10M.
       </p>
     </section>
 
-    <!-- COMMUNITY / WAITLIST -->
+    <!-- COMMUNITY -->
     <section id="community" class="section">
       <h2 class="section-title">Community</h2>
-      <p class="section-text">
-        Follow the journey, test early builds and secure your spot for Season 1 eligibility.
-      </p>
 
-      <div class="community-layout">
-        <div class="community-links">
-          <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
-            Join X / Telegram (soon)
-          </a>
-        </div>
-
-        <form id="waitlistForm" class="waitlist-form">
-          <label for="waitlistInput">Wallet / Email (no connect yet, just text)</label>
-          <input
-            id="waitlistInput"
-            type="text"
-            placeholder="0x... or your email"
-            autocomplete="off"
-          />
-          <button type="submit" class="btn btn-primary">Join Early Waitlist</button>
-          <p class="waitlist-note" id="waitlistMessage">
-            This is a simple demo waitlist. Data is only stored in your browser (local).
-          </p>
-        </form>
+      <div class="community-links">
+        <a class="btn btn-outline" href="https://x.com/hypermultiswap" target="_blank">
+          Follow on X
+        </a>
       </div>
     </section>
   </main>
@@ -212,43 +149,8 @@
   </footer>
 
   <script>
-    // Year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Simple local waitlist counter
-    const walletCountEl = document.getElementById('walletCount');
-    const baseCount = 127; // change this if you want a different starting number
-
-    let extraJoins = Number(localStorage.getItem('hms_extra_joins') || '0');
-    if (walletCountEl) {
-      walletCountEl.textContent = baseCount + extraJoins;
-    }
-
-    const waitlistForm = document.getElementById('waitlistForm');
-    const waitlistInput = document.getElementById('waitlistInput');
-    const waitlistMessage = document.getElementById('waitlistMessage');
-
-    if (waitlistForm) {
-      waitlistForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        const value = (waitlistInput.value || '').trim();
-
-        if (!value) {
-          waitlistMessage.textContent = 'Please enter a wallet address or email.';
-          return;
-        }
-
-        extraJoins += 1;
-        localStorage.setItem('hms_extra_joins', String(extraJoins));
-
-        if (walletCountEl) {
-          walletCountEl.textContent = baseCount + extraJoins;
-        }
-
-        waitlistMessage.textContent = 'You are in. Snapshot saved locally in this browser.';
-        waitlistInput.value = '';
-      });
-    }
   </script>
+
 </body>
 </html>
